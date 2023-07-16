@@ -1,13 +1,12 @@
-﻿using GerenciamentoDeRequisicao.Application.Repository.Interface;
-using GerenciamentoDeRequisicao.Domain.Interface;
+﻿using GerenciamentoDeRequisicao.Domain.Interface;
 using GerenciamentoDeRequisicao.Domain.Model;
 
 namespace GerenciamentoDeRequisicao.Application.Repository
 {
-    public class RequisicaoRepositoryApplication : IRequisicaoRepositoryApplication
+    public class RequisicaoApplication : IRequisicaoRepository
     {
         private readonly IRequisicaoRepository _repository;
-        public RequisicaoRepositoryApplication(IRequisicaoRepository repository)
+        public RequisicaoApplication(IRequisicaoRepository repository)
         {
             _repository = repository;
         }
@@ -20,6 +19,11 @@ namespace GerenciamentoDeRequisicao.Application.Repository
         public void Delete(int id)
         {
             _repository.Delete(id);
+        }
+
+        public bool Exists(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Requisicao> FindAll()

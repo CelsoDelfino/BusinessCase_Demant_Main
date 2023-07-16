@@ -11,17 +11,10 @@ namespace GerenciamentoDeRequisicao.Domain.Model
     {
         public int Id { get; set; }
         public string NomeCompleto { get; set; }
-        public DateTime Data { get; set; }
+        public DateTime DataDeCriacao { get; set; }
         public string Cidade { get; set; }
         public string Descricao { get; set; }
         public RequisicaoStatusEnum RequisicaoStatus { get; set; }
-
-        public enum RequisicaoStatusEnum
-        {
-            Recebida = 1,
-            EmAndamento = 2,
-            Concluida = 3
-        }
 
     }
 }

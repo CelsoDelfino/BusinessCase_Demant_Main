@@ -1,5 +1,5 @@
 ﻿using GerenciamentoDeRequisicao.API.DTO;
-using GerenciamentoDeRequisicao.Application.Repository.Interface;
+using GerenciamentoDeRequisicao.Domain.Interface;
 using GerenciamentoDeRequisicao.Domain.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,9 +9,9 @@ namespace GerenciamentoDeRequisicao.API.Controller
     [ApiController]
     public class RequisicaoController : ControllerBase
     {
-        private readonly IRequisicaoRepositoryApplication _repository;
+        private readonly IRequisicaoRepository _repository;
 
-        public RequisicaoController(IRequisicaoRepositoryApplication repository)
+        public RequisicaoController(IRequisicaoRepository repository)
         {
             _repository = repository;
         }

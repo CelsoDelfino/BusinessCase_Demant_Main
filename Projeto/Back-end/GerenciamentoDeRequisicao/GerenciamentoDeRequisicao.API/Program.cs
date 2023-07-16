@@ -1,5 +1,3 @@
-using GerenciamentoDeRequisicao.Application.Repository;
-using GerenciamentoDeRequisicao.Application.Repository.Interface;
 using GerenciamentoDeRequisicao.Domain.Interface;
 using GerenciamentoDeRequisicao.Infra.Data;
 using GerenciamentoDeRequisicao.Infra.Repository;
@@ -18,7 +16,7 @@ _.UseSqlServer(builder
 
 //cria apenas uma instancia por requisicao
 builder.Services.AddScoped<IRequisicaoRepository, RequisicaoRepository>();
-builder.Services.AddScoped<IRequisicaoRepositoryApplication, RequisicaoRepositoryApplication>();
+
 
 builder.Services.AddControllers()
     .AddJsonOptions(
